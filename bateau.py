@@ -13,3 +13,10 @@ class Bateau:
             return [(self.ligne +i, self.colonne) for i in range(self.longueur)]
         else:
             return [(self.ligne, self.colonne +i) for i in range(self.longueur)]
+        
+    
+    def coulé(self,grille):
+        for k in self.position:
+            if grille.grille[k[0]*grille.colonnes + k[1]] != 'x':
+                return False
+        return True

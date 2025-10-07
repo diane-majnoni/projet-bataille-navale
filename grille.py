@@ -5,10 +5,12 @@ class Grille:
         self.colonnes = colonnes
         self.grille = [ self.vide for i in range(self.lignes * self.colonnes)]
 
-    def tirer(self, l, c):
+    def tirer(self, l, c, touche='x'):
         if self.grille[l*self.colonnes + c] == self.vide:
-            self.grille[l*self.colonnes + c] = 'x '
+            self.grille[l*self.colonnes + c] = touche
+
             return True
+
         else:
             return False 
             
