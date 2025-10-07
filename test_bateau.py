@@ -12,3 +12,12 @@ def test_position():
     b2 = Bateau(0, 0, longueur=2, vertical=True)
     assert b2.position == [(0, 0), (1, 0)]
 
+def test_coulé():
+    g = Grille(8, 8)
+    b = Bateau(1, 1, longueur=4, vertical=False)
+    g.tirer(1, 1)
+    g.tirer(1, 2)
+    assert not b.coulé(g)
+    g.tirer(1, 3)
+    g.tirer(1, 4)
+    assert b.coulé(g)
