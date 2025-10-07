@@ -30,5 +30,5 @@ class Grille:
             if self.grille[k[0]*self.colonnes + k[1]] != self.vide:
                 return False
         for k in b.position:
-            self.grille[k[0]*self.colonnes + k[1]] = '⛵'
+            self.grille[k[0]*self.colonnes + k[1]] =  b.marque
         return True

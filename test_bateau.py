@@ -4,7 +4,7 @@ from grille import Grille
 def test_defaults():
     b = Bateau(2, 3)
     assert b.longueur == 1
-    assert b.vertical == False
+    assert not b.vertical
 
 def test_position():
     b1 = Bateau(1, 1, longueur=3, vertical=False)
@@ -21,3 +21,4 @@ def test_coulé():
     g.tirer(1, 3)
     g.tirer(1, 4)
     assert b.coulé(g)
+

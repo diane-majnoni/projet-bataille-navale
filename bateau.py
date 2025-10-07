@@ -1,11 +1,12 @@
 from grille import Grille
 
 class Bateau:
-    def __init__(self, ligne, colonne,longueur=1, vertical=False):
+    def __init__(self, ligne, colonne,longueur=1, vertical=False, marque="⛵"):
       self.ligne = ligne
       self.colonne = colonne
       self.longueur = longueur
       self.vertical = vertical
+      self.marque = marque
 
     @property
     def position(self):
