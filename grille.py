@@ -7,7 +7,7 @@ class Grille:
 
     def tirer(self, l, c):
         if self.grille[l*self.colonnes + c] == self.vide:
-            self.grille[(l-1)*self.colonnes + (c-1)] = 'x'
+            self.grille[l*self.colonnes + 1] = 'x'
             return True
         else:
             return False 
