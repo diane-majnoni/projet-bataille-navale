@@ -27,3 +27,11 @@ def test_ajoute():
     g.ajoute(b5)
     assert b5.longueur ==2
     assert g.grille[0] == "🚣"
+
+def test_placement_aleatoire():
+    g = Grille(6, 6)
+    l, c, vertical = g.placement_aleatoire(3)
+    b = Bateau(l, c, longueur=3, vertical=vertical)
+    for k in b.position:
+        assert g.grille[k[0]*g.colonnes + k[1]] == b.marque
+    
