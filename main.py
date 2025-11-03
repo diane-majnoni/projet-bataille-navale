@@ -26,7 +26,6 @@ placement_bateaux += list(croiseur.position)
 placement_bateaux += list(porteAvion.position)
 
 
-print(grille_cachée)
 grille = Grille(8,10)
 
 positions_touchees = []
